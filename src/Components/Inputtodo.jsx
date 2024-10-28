@@ -207,8 +207,8 @@ const InputTodo = () => {
                   {todo.recurrence_nth_day_of_month && (
                     <p className="text-sm text-gray-500">Nth Day of Month: {todo.recurrence_nth_day_of_month}</p>
                   )}
-                  <p className="text-sm text-gray-500">Start Date: {todo.recurrence_start_date || 'No Date'}</p>
-                  <p className="text-sm text-gray-500">End Date: {todo.recurrence_end_date || 'No Date'}</p>
+                  <p className="text-sm text-gray-500">Start Date: { new Date(todo.recurrence_start_date).toISOString().split('T')[0] || 'No Date'}</p>
+                  <p className="text-sm text-gray-500">End Date: {new Date(todo.recurrence_end_date).toISOString().split('T')[0] || 'No Date'}</p>
                 </li>
               ))
             )}
