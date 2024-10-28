@@ -3,7 +3,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import axios from 'axios';
 import 'react-toastify/dist/ReactToastify.css';
 
-const API_URL = 'http://localhost:5000/todos';
+const API_URL = process.env.REACT_APP_API_URL;
 
 const InputTodo = () => {
   const [input, setInput] = useState('');
